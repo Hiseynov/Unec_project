@@ -12,6 +12,7 @@ function App() {
     {router}
     <Footer></Footer>
     {/* <p>New</p> */}
+    <p>salam</p>
     </>
   )
 }
