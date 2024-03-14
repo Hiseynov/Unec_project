@@ -11,7 +11,7 @@ function App() {
     <Header></Header>
     {router}
     <Footer></Footer>
-    <p>New</p>
+    {/* <p>New</p> */}
     </>
   )
 }
