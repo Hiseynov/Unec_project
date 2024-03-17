@@ -32,7 +32,7 @@ export const routes = [
         element:<Şablon></Şablon>
       },
       {
-        path:"News Block",
+        path:"Blog/:id",
         element:<NewsBlock></NewsBlock>
       }
 ]

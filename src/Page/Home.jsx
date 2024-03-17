@@ -1,7 +1,11 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { dates } from '../data/data'
 
 function Home() {
+  // const [PropsData,setPropsData] = useState("")
+  // const [PostData,setPostData] = useState(false)
   return (
     <>
       <section id='HomePhoto'>
@@ -89,42 +93,21 @@ function Home() {
             <Link to={'Blog'}><p>Hamısına baxın <i className="fa-solid fa-arrow-right"></i></p></Link>
           </div>
           <div className="News-container-categories">
-            <Link to={"News Block"} className="News-item">
+            {
+            dates.slice(0,4).map((date,index)=>(
+              <Link key={index} to={`Blog/${date.id}`} className="News-item">
               <div className="News-item-img">
-                <img src="src\img\News.png" alt="News" />
+                <img src={date.url}alt="News" />
               </div>
               <div className="News-item-word">
-                <h3>Aqrar İnnovasiya Mərkəzi ilə Azərbaycan Kənd Qadınları Assosasiyası arasında görüş keçirilib</h3>
-                <span>12/11/2023</span>
+                <h3>{date.logo}</h3>
+                <p>{date.text}</p>
+                <span>{date.data}</span>
               </div>
+              
             </Link>
-            <Link to={"News Block"} className="News-item">
-              <div className="News-item-img">
-                <img src="src\img\News.png" alt="News" />
-              </div>
-              <div className="News-item-word">
-                <h3>Aqrar İnnovasiya Mərkəzi ilə Azərbaycan Kənd Qadınları Assosasiyası arasında görüş keçirilib</h3>
-                <span>12/11/2023</span>
-              </div>
-            </Link>
-            <Link to={"News Block"} className="News-item">
-              <div className="News-item-img">
-                <img src="src\img\News.png" alt="News" />
-              </div>
-              <div className="News-item-word">
-                <h3>Aqrar İnnovasiya Mərkəzi ilə Azərbaycan Kənd Qadınları Assosasiyası arasında görüş keçirilib</h3>
-                <span>12/11/2023</span>
-              </div>
-            </Link>
-            <Link to={"News Block"} className="News-item">
-              <div className="News-item-img">
-                <img src="src\img\News.png" alt="News" />
-              </div>
-              <div className="News-item-word">
-                <h3>Aqrar İnnovasiya Mərkəzi ilə Azərbaycan Kənd Qadınları Assosasiyası arasında görüş keçirilib</h3>
-                <span>12/11/2023</span>
-              </div>
-            </Link>
+            ))
+            }
           </div>
         </div>
       </section>
