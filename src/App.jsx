@@ -11,6 +11,7 @@ function App() {
     <Header></Header>
     {router}
     <Footer></Footer>
+    <p>Aysel Salam</p>
     </>
   )
 }
