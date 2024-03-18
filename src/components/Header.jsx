@@ -12,7 +12,7 @@ export default function header() {
           <div className="header-top-word">
             <ul>
               <li className="Acount">
-                My Account <i className="fa-solid fa-right-from-bracket"></i>
+                <Link to={"Login"}>  My Account <i className="fa-solid fa-right-from-bracket"></i></Link>
               </li>
               <li className="SifarisEt">SİFARİŞ ET</li>
             </ul>
